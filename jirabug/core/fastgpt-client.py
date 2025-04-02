@@ -152,7 +152,3 @@ class FastGPTClient:
                     reason = line.replace("理由:", "").strip()
 
         return feature_id, confidence, reason
-
-if __name__ == "__main__":
-    # 测试代码
-    print("这是FastGPT客户端模块，请勿直接运行")

@@ -254,7 +254,3 @@ def save_issues_to_json(issues: List[Any], output_file: str) -> List[Dict[str, A
     print(f"已保存 {len(serializable_issues)} 个issues到文件 {output_file}")
 
     return serializable_issues
-
-if __name__ == "__main__":
-    # 测试代码
-    print("这是Jira客户端模块，请勿直接运行")
