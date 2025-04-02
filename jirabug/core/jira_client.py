@@ -10,6 +10,7 @@ import json
 import time
 import pickle
 from typing import Optional, List, Dict, Any
+from jira import JIRA
 
 
 class JiraClient:
