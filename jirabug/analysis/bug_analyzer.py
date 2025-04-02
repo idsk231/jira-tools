@@ -253,33 +253,3 @@ def get_bug_statistics(bugs: List[Dict[str, Any]]) -> Dict[str, Any]:
             "unknown": total_bugs - confidence_high - confidence_medium - confidence_low
         }
     }
-
-
-# 如果作为独立脚本运行，则执行测试
-if __name__ == "__main__":
-    print("Bug分析模块 - 测试模式")
-
-    # 创建测试数据
-    test_features = [
-        {"key": "FEAT-1", "summary": "用户登录功能"},
-        {"key": "FEAT-2", "summary": "数据导出功能"}
-    ]
-
-    test_bugs = [
-        {
-            "key": "BUG-1",
-            "summary": "登录页面崩溃",
-            "description": "用户在登录页面输入用户名和密码后点击登录按钮，页面崩溃。",
-            "status": "Open",
-            "created": "2023-01-01T00:00:00Z"
-        }
-    ]
-
-    # 测试功能
-    print("测试 prepare_feature_data_for_gpt 函数...")
-    feature_data = prepare_feature_data_for_gpt(test_features)
-    print(f"特性数据: {feature_data}")
-
-    print("\n测试 extract_bug_data 函数...")
-    bug_data = extract_bug_data(test_bugs[0])
-    print(f"Bug数据: {bug_data}")
